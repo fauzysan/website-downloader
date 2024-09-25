@@ -23,7 +23,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Webiste Downloader",
   description: "Tempat download video & music",
-  icons: "/icon.jpg"
+  icons: "/icon.png"
 };
 
 export default function RootLayout({

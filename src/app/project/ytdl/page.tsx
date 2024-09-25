@@ -4,10 +4,11 @@ import { Input } from '@/components/ui/input'
 import React from 'react'
 import { useState} from 'react';
 import axios from 'axios';
+import Link from 'next/link';
 
 const page = () => {
     const [url, setUrl] = useState('');
-    const [data, setData] = useState([]);
+    const [data, setData] = useState('')
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [submitted, setSubmitted] = useState(false); 
@@ -22,7 +23,7 @@ const page = () => {
             const response = await axios.get('https://api.ryzendesu.vip/api/downloader/ytmp4', {
                 params: {url}
             });
-            setData(response.data)
+            setData(response.data.url)
 
         } catch (err) {
             
@@ -50,7 +51,7 @@ const page = () => {
                 {error && <p className="text-red-500">Error: {error}</p>}
                 {submitted && !loading && !error && data && ( 
                     <Button>
-                        <a href={data.url}></a>
+                        <Link href={data}>Download disini</Link>
                     </Button>
                 )}
 
