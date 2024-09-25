@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const Hero = () => {
   return (
-    <div className=' w-full h-screen'>
-        <div className='container flex space-x-5 justify-center items-center py-52 mx-auto'>
+    <div className='w-full'>
+        <div className='container flex space-x-5 justify-center items-center md:py-52 mx-auto'>
            <div className='md:flex md:space-x-40 '>
                 <div className='p-5'>
                     <p className='text-4xl mb-16'>Website Downloads Gratis!</p>
