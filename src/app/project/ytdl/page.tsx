@@ -4,7 +4,6 @@ import { Input } from '@/components/ui/input'
 import React from 'react'
 import { useState} from 'react';
 import axios from 'axios';
-import Link from 'next/link';
 
 const page = () => {
     const [url, setUrl] = useState('');
@@ -14,7 +13,7 @@ const page = () => {
     const [submitted, setSubmitted] = useState(false); 
 
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault(); 
         setLoading(true);   
         setError(null);
@@ -26,7 +25,7 @@ const page = () => {
             setData(response.data)
 
         } catch (err) {
-            setError(err.message)
+            
         } finally {
             setLoading(false)
         }
@@ -51,7 +50,7 @@ const page = () => {
                 {error && <p className="text-red-500">Error: {error}</p>}
                 {submitted && !loading && !error && data && ( 
                     <Button>
-                        <Link href={data.url}>Download Disini!</Link>
+                        <a href={data.url}></a>
                     </Button>
                 )}
 
