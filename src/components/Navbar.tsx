@@ -4,6 +4,7 @@ import Link from "next/link"
 import { ModeToggle } from './ModeToggle'
 
 const Navbar = () => {
+    
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,7 +14,7 @@ const Navbar = () => {
     <nav className=' p-4 shadow-xl border-b'>
         <div className='container mx-auto flex justify-between items-center'>
             <div className=" text-xl font-bold">
-                <Link href="/">Web Downloader</Link>
+                <Link href="/" className=''>Web Downloader</Link>
             </div>
             <ul className='hidden md:flex space-x-4 p-5'>
                 <li>

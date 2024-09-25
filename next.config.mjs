@@ -6,10 +6,18 @@ const nextConfig = {
         remotePatterns: [
           {
             protocol: "https",
-            hostname: "assets.vercel.com",
-            port: "",
-            pathname: "/image/**",
+            hostname:"cdn.mos.cms.futurecdn.net",
+
           },
+          {
+            protocol: "https",
+            hostname: "download.logo.wine"
+          },
+          {
+            protocol: "https",
+            hostname: "cdn.pixabay.com"
+          }
+        
         ],
       },
 };
